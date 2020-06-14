@@ -1,0 +1,32 @@
+.Button {
+  width: 140px;
+  height: 50px;
+  background-image: linear-gradient(to right, #FF8A01, #E52E70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: .95rem;
+  letter-spacing: .2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  transition: transform .5s ease-in-out;
+}
+
+.Button__arrow {
+  position: absolute;
+  right: -20px;
+  top: 6.5px;
+  width: 35px;
+  height: 35px;
+}
+
+.Button:hover {
+  .Button__arrow {
+    transform: translateX(10px);
+  }
+}

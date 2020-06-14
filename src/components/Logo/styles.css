@@ -1,0 +1,27 @@
+.Logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  cursor: pointer;
+}
+
+.Logo__image-wrapper {
+  background-image: url("../../images/logo.jpg");
+  background-size: cover;
+  background-position: top right;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 5%;
+}
+
+.Logo__author {
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=styles.css.map */

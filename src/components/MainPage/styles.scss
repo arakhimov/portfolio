@@ -1,0 +1,27 @@
+.MainPage__title {
+  font-family: inherit;
+  font-style: normal;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: .7rem;
+  margin: 0;
+  margin-bottom: 2%;
+}
+
+.MainPage__subtitle {
+  font-family: inherit;
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: .5rem;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 4%;
+}
+
+.MainPage__development {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}

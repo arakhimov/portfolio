@@ -24,4 +24,52 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10%;
+}
+
+.MainPage__link-wrapper {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 5s ease-in-out;
+}
+
+.MainPage__link {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.MainPage__arrow {
+  width: 35px;
+  height: 35px;
+  transition: transform .3s ease-in-out;
+  transform: translateY(10px) rotate(90deg);
+}
+
+.MainPage__link-wrapper:hover {
+  .MainPage__arrow {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+.MainPage__anchor {
+  font-family: inherit;
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: .8rem;
+  font-weight: 600;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
 }

@@ -9,14 +9,14 @@ $activeLinkColor: orange;
 }
 
 .Nav__link {
-  font-family: 'Inter', Tahoma, Verdana, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   font-style: normal;
   text-decoration: none;
-  // text-transform: uppercase;
-  // letter-spacing: .1rem;
-  // color: #fef6eb;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: steelblue;
   margin-right: 20px;
 }
 

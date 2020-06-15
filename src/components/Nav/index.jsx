@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 import './styles.css';
 
 export const Nav = (props) => {
+
   const changeBackground = () => props.changeBackground();
+
   return (
     <nav className="Nav">
       <NavLink className="Nav__link" exact to="/" activeClassName="Nav__link Nav__link_active">Главная</NavLink>
@@ -15,4 +17,5 @@ export const Nav = (props) => {
       </label>
     </nav>
   );
+  
 }

@@ -50,7 +50,7 @@ export class MainPage extends Component {
             <Button {...this.props} theme={ this.props.theme } className="MainPage__button" name='About Me' />
           </div>
           <AnimateLogo />
-          <NavLink to='/projects/latest' className="MainPage__link">My works</NavLink>
+          <NavLink to='/portfolio/projects/latest' className="MainPage__link">My works</NavLink>
           {/* геометрические фигуры */}
           <HalfCircle color='#a60000' options={{ top: '15%', left: '15%', transform: moveFigure }} />
           <HalfCircle color='#c9f600' options={{ top: '45%', left: '70%', transform: 'rotate(80deg) ' + moveFigure }} />

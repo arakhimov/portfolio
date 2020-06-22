@@ -46,9 +46,9 @@ export class Root extends Component {
           </div>
         </header>
         <Switch>
-          <Route path="/main" render={ () => <MainPage { ...this.props.history } theme={ this.props.theme } /> } />
-          <Route path="/about-me" render={ () => <AboutMePage theme={ this.props.theme } /> } />
-          <Route path="/projects" component={ Projects }></Route>
+          <Route path="/portfolio/main" render={ () => <MainPage { ...this.props.history } theme={ this.props.theme } /> } />
+          <Route path="/portfolio/about-me" render={ () => <AboutMePage theme={ this.props.theme } /> } />
+          <Route path="/portfolio/projects" component={ Projects }></Route>
         </Switch>
       </div>
     );

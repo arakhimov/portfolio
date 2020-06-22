@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2320c143.chunk.css",
+    "main.js": "/static/js/main.b7ffed9d.chunk.js",
+    "main.js.map": "/static/js/main.b7ffed9d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e5fc83a6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e5fc83a6.js.map",
+    "static/js/2.6cbc4aa9.chunk.js": "/static/js/2.6cbc4aa9.chunk.js",
+    "static/js/2.6cbc4aa9.chunk.js.map": "/static/js/2.6cbc4aa9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d659825b56a2cc07cecd1d51bcd75256.js": "/precache-manifest.d659825b56a2cc07cecd1d51bcd75256.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2320c143.chunk.css.map": "/static/css/main.2320c143.chunk.css.map",
+    "static/js/2.6cbc4aa9.chunk.js.LICENSE.txt": "/static/js/2.6cbc4aa9.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/static/media/Inter-Regular.9b0077c4.woff2",
+    "static/media/chat_messenger.png": "/static/media/chat_messenger.9532086a.png",
+    "static/media/cover.jpg": "/static/media/cover.0cf630f4.jpg",
+    "static/media/cover_dark.jpg": "/static/media/cover_dark.f7d9c6cb.jpg",
+    "static/media/form_validation.png": "/static/media/form_validation.eadb0b54.png",
+    "static/media/learn_to_learn.png": "/static/media/learn_to_learn.0d55c971.png",
+    "static/media/mesto.png": "/static/media/mesto.0bd4fe0a.png",
+    "static/media/news_analyzer.png": "/static/media/news_analyzer.398db2ba.png",
+    "static/media/onpoint_test_task.png": "/static/media/onpoint_test_task.4a8f2e6e.png",
+    "static/media/travel_to_russia.png": "/static/media/travel_to_russia.90a51a8c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5fc83a6.js",
+    "static/js/2.6cbc4aa9.chunk.js",
+    "static/css/main.2320c143.chunk.css",
+    "static/js/main.b7ffed9d.chunk.js"
+  ]
+}

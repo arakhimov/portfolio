@@ -22,9 +22,9 @@ export const Nav = (props) => {
         <rect className="Nav__logo-path" fill={ theme } x="0.5" y="57.5" width="99.21" height="14.17" rx="5.1"/>
       </svg>
       <div style={ wrapperStyles } className="Nav__wrapper">
-        <NavLink className="Nav__link" exact to="/" activeClassName="Nav__link Nav__link_active">Главная</NavLink>
+        <NavLink className="Nav__link" to="/main" activeClassName="Nav__link Nav__link_active">Главная</NavLink>
         <NavLink className="Nav__link" to="/about-me" activeClassName="Nav__link Nav__link_active">Обо мне</NavLink>
-        <NavLink className="Nav__link" to="/portfolio/latest" activeClassName="Nav__link Nav__link_active">Портфолио</NavLink>
+        <NavLink className="Nav__link" to="/projects" activeClassName="Nav__link Nav__link_active">Портфолио</NavLink>
       </div>
     </nav>
   );

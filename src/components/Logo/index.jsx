@@ -3,7 +3,7 @@ import './styles.css';
 
 export const Logo = ({ push }) => {
 
-  const handleClick = () => push('/');
+  const handleClick = () => push('/main');
 
   return (
     <div onClick={ handleClick } className="Logo">

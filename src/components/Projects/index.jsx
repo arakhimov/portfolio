@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Card } from '../Card/index';
 import { projectsDescription } from '../../constants/projectsDescription';
 
-export class Portfolio extends Component {
+export class Projects extends Component {
 
   state = {
     projectsType: 'Latest'
@@ -21,27 +21,27 @@ export class Portfolio extends Component {
         <nav className="Portfolio__nav">
           <NavLink 
             onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/latest" } 
+            className="Nav__link" to={ "/projects/latest" } 
             activeClassName="Nav__link Nav__link_active">Latest
           </NavLink>
           <NavLink 
             onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/css" } 
+            className="Nav__link" to={ "/projects/css" } 
             activeClassName="Nav__link Nav__link_active">CSS
           </NavLink>
           <NavLink 
             onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/js" } 
+            className="Nav__link" to={ "/projects/js" } 
             activeClassName="Nav__link Nav__link_active">JS
           </NavLink>
           <NavLink 
             onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/react" } 
+            className="Nav__link" to={ "/projects/react" } 
             activeClassName="Nav__link Nav__link_active">React
           </NavLink>
           <NavLink 
             onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/all" } 
+            className="Nav__link" to={ "/projects/all" } 
             activeClassName="Nav__link Nav__link_active">All
           </NavLink>
         </nav>

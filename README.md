@@ -2,4 +2,4 @@
 
 ## https://arakhimov.github.io/portfolio/
 
-### Использовались технологии: HTML, CSS, JS, React, Webpack, Git 
+### Использовались технологии: HTML, CSS, JS, React, Webpack, Git. 

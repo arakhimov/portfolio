@@ -4,7 +4,7 @@ import './styles.css';
 import { Logo } from '../Logo/index';
 import { Nav } from '../Nav/index';
 import { MainPage } from '../MainPage/index';
-import { Portfolio } from '../Portfolio/index';  
+import { Projects } from '../Projects/index';  
 import { AboutMePage } from '../AboutMePage/index'; 
 import { DayNightLogo } from '../DayNightLogo/index';
 
@@ -46,9 +46,9 @@ export class Root extends Component {
           </div>
         </header>
         <Switch>
-          <Route exact path="/" render={ () => <MainPage { ...this.props.history } theme={ this.props.theme } /> } />
+          <Route path="/main" render={ () => <MainPage { ...this.props.history } theme={ this.props.theme } /> } />
           <Route path="/about-me" render={ () => <AboutMePage theme={ this.props.theme } /> } />
-          <Route path="/portfolio" component={ Portfolio }></Route>
+          <Route path="/projects" component={ Projects }></Route>
         </Switch>
       </div>
     );

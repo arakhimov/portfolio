@@ -1,7 +1,5 @@
-## Portfolio Rakhimov Artem
+## Portfolio Front-End разработчик.
 
 ## https://arakhimov.github.io/portfolio/
 
-## Портфолио Front-End разработчик.
-
-### Использовались технологии HTML, CSS, JS, React, Webpack, Git 
+### Использовались технологии: HTML, CSS, JS, React, Webpack, Git 

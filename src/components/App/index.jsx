@@ -11,7 +11,7 @@ const theme = {
 
 export class App extends Component {
   
-  state = {theme: theme.light};
+  state = {theme: theme.dark};
 
   changeBackground = () => {
     if (this.state.theme === theme.light) {

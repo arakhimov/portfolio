@@ -1,0 +1,30 @@
+.AnimateLogo {
+  width: 240px;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+@media screen and (max-width: 600px) {
+  .AnimateLogo {
+    width: 200px;
+    height: 100px;
+  }
+}
+  
+.AnimateLogo__stroke {
+  fill: none;
+  stroke: crimson;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1500;
+  animation: lines 3s infinite 1s;
+}
+
+@keyframes lines  {
+  100% {
+    stroke-dashoffset: 3000;
+  }
+}

@@ -1,0 +1,16 @@
+.AboutMePage {
+  min-height: 90vh;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+  .AboutMePage {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}

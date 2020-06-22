@@ -1,0 +1,73 @@
+.AboutMe {
+  box-sizing: border-box;
+  padding: 5%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.AboutMe::before {
+  content: 'About';
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-family: 'Halis Grotesque';
+  font-size: 6vw;
+  color: steelblue;
+  opacity: .2;
+}
+
+@media screen and (max-width: 1024px) {
+  .AboutMe {
+    width: 100%;
+  }
+  .AboutMe::before {
+    font-size: 10vw;
+  }
+}
+
+.AboutMe__title {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.AboutMe__subtitle {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.AboutMe__text {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify;
+  text-indent: 20px;
+  margin-bottom: 10px;
+}
+
+.AboutMe__icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 5%;
+}
+
+.AboutMe__icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.AboutMe__icon:hover {
+  .AboutMe__icon-path{
+    fill: steelblue;
+  }
+}

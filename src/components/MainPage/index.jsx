@@ -1,41 +1,72 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
-import { Portfolio } from '../Portfolio/index';
+import { NavLink } from 'react-router-dom';
 import { Button } from '../Button/index';
+import { AnimateLogo } from '../AnimateLogo/index';
+import { HalfCircle } from '../Figures/HalfCircle/index';
+import { Triangle } from '../Figures/Triangle/index';
+import { Octagon } from '../Figures/Octagon/index';
 
 const background = require('../../images/cover.jpg');
 const backgroundDark = require('../../images/cover_dark.jpg');
 
-export const MainPage = (props) => {
-  return (
-    <div className="MainPage">
-      <div style={{ backgroundImage: props.theme === '#fef6eb' ? `url(${background})` : `url(${backgroundDark})`,
+export class MainPage extends Component {
+
+  state = {
+    currentPositionX: 0,
+    currentPositionY: 0
+  };
+
+  getBackgroundImageSettings = (theme) => {
+    return {
+      backgroundImage: theme === '#fef6eb' ? `url(${background})` : `url(${backgroundDark})`,
       backgroundPosition: 'top right',
       backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain',
-     }} className="MainPage__development">
-        {/* заголовок */}
-        <h1 style={{ color: props.theme === '#fef6eb' ? '#1c1d25' : '#fef6eb' }} 
-            className="MainPage__title">Рахимов Артем
-        </h1>
-        {/* подзаголовок */}
-        <h2 style={{ color: props.theme === '#fef6eb' ? '#1c1d25' : '#fef6eb' }}
-            className="MainPage__subtitle">Front-end Developer
-        </h2>
-        {/* кнопка обо мне */}
-        <Button {...props} theme={ props.theme } className="MainPage__button" name='About Me' />
-        {/* ссылка на работы */}
-        <div className="MainPage__link-wrapper">
-          <h3 style={{ color: props.theme === '#fef6eb' ? '#1c1d25' : '#fef6eb' }} className="MainPage__link">Works</h3>
-          <svg className="MainPage__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
-            <path fill={ props.theme === '#fef6eb' ? '#1c1d25' : '#fef6eb' } 
-                  d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607" />
-          </svg>
+      backgroundSize: window.innerWidth < 1340 ? '45%'  : 'contain'
+    }
+  };
+
+  handleMoveFigure = event => {
+    this.setState({
+      currentPositionX: event.clientX / 20,
+      currentPositionY: event.clientY / 20
+    });
+  };
+
+  getCurrentTheme = (theme) => {
+    return {color: theme === '#fef6eb' ? '#1c1d25' : '#fef6eb'}
+  };
+
+  render() {
+
+    let moveFigure = `translateX(${this.state.currentPositionX}px) translateY(${this.state.currentPositionY}px)`;
+
+    return (
+      <div className="MainPage">
+        <div style={ this.getBackgroundImageSettings(this.props.theme)} onMouseMove={ this.handleMoveFigure } className="MainPage__development">
+          <div className="MainPage__left-column">
+            <h1 style={ this.getCurrentTheme(this.props.theme) } className="MainPage__title">Рахимов Артем</h1>
+            <h2 style={ this.getCurrentTheme(this.props.theme) }className="MainPage__subtitle">Front-end Developer</h2>
+            <Button {...this.props} theme={ this.props.theme } className="MainPage__button" name='About Me' />
+          </div>
+          <AnimateLogo />
+          <NavLink to='/portfolio/Latest' className="MainPage__link">My works</NavLink>
+          {/* геометрические фигуры */}
+          <HalfCircle color='#a60000' options={{ top: '15%', left: '15%', transform: moveFigure }} />
+          <HalfCircle color='#c9f600' options={{ top: '45%', left: '70%', transform: 'rotate(80deg) ' + moveFigure }} />
+          <HalfCircle color='#e557af' options={{ top: '85%', left: '0%', transform: 'rotate(220deg) ' + moveFigure }} />
+          <HalfCircle color='#ffd300' options={{ top: '5%', right: '0%', transform: 'rotate(120deg) ' + moveFigure }} />
+          <Triangle color='#218359' options={{ top: '45%', right: '5%', transform: moveFigure }} />
+          <Triangle color='#ffbf40' options={{ top: '25%', left: '45%', transform: 'rotate(20deg) ' + moveFigure }} />
+          <Triangle color='#37b6ce' options={{ bottom: '25%', left: '30%', transform: 'rotate(40deg) ' + moveFigure }} />
+          <Triangle color='#ffff40' options={{ top: '0%', left: '0%', transform: 'rotate(40deg)' + moveFigure }} />
+          <Octagon color='#a62d00' options={{ top: '0%', left: '30%', transform: moveFigure }} />
+          <Octagon color='#3914af' options={{ top: '60%', left: '60%', transform: 'rotate(20deg) ' + moveFigure }} />
+          <Octagon color='#85004b' options={{ top: '12%', left: '64%', transform: 'rotate(40deg) ' + moveFigure }} />
+          <Octagon color='#a64800' options={{ bottom: '0%', right: '5%', transform: 'rotate(10deg) ' + moveFigure }} />
         </div>
-        {/* геометрические фигуры */}
       </div>
-      <h2 className="MainPage__anchor">Latest Works</h2>
-      <Portfolio />
-    </div>
-  );
+    );
+  }
+  
 }

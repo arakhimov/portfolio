@@ -1,0 +1,104 @@
+.Contacts {
+  box-sizing: border-box;
+  padding: 5% 5% 15%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  user-select: text;
+}
+
+@media screen and (max-width: 1024px) {
+  .Contacts {
+    width: 100%;
+  }
+}
+
+.Contacts::before {
+  content: 'Contacts';
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  font-family: 'Halis Grotesque';
+  font-size: 6vw;
+  color: steelblue;
+  opacity: .2;
+}
+
+@media screen and (max-width: 1024px) {
+  .Contacts::before {
+    font-size: 10vw;
+  }
+}
+
+.Contacts__title {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.Contacts__subtitle {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+
+.Contacts__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4%;
+}
+
+.Contacts__list-item {
+  font-family: inherit;
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.Contacts__list-item:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.Contacts__image {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.Contacts__link {
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   margin: 1% 0;
+}
+
+.Contacts__link:active, .Contacts__link:visited, .Contacts__link:link {
+  color: steelblue;
+}
+
+.Contacts__link .Contacts__image-path {
+  fill: steelblue;
+}
+
+.Contacts__link:hover {
+  .Contacts__image-path {
+    fill: crimson;
+  }
+  color: crimson;
+}
+
+.Contacts__list-item:hover {
+  .Contacts__image-path {
+    fill: steelblue;
+  }
+}

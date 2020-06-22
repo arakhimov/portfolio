@@ -1,0 +1,15 @@
+.DayNightLogo__switch-theme {
+  visibility: hidden;
+}
+
+.DayNightLogo__label {
+  cursor: pointer;
+  position: relative;
+}
+
+.DayNightLogo__image {
+  width: 24px;
+  height: 24px;
+}
+
+/*# sourceMappingURL=styles.css.map */

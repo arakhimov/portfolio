@@ -1,25 +1,25 @@
 .Logo {
   display: flex;
   align-items: center;
-  width: 20%;
+  min-height: 80px;
   cursor: pointer;
 }
 
-.Logo__image-wrapper {
-  background-image: url('../../images/logo.jpg');
-  background-size: cover;
-  background-position: top right;
-  border-radius: 50%;
+.Logo__image {
   width: 60px;
   height: 60px;
-  margin-right: 5%;
+  object-fit: contain;
+  object-position: center;
 }
 
-.Logo__author {
-  font-family: 'Courier New', Courier, monospace;
-  font-style: normal;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
+.Logo__text {
+  font-size: 48px;
+  fill: #4682b4;
+  font-family: ComicSansMS, Comic Sans MS, sans-serif;
+}
+
+.Logo:hover {
+  .Logo__text {
+    fill: crimson;
+  }
 }

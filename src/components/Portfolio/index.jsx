@@ -1,20 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
+import { NavLink } from 'react-router-dom';
 import { Card } from '../Card/index';
+import { projectsDescription } from '../../constants/projectsDescription';
 
-const projectsName = ['chat_messenger', 'news_analyzer', 'mesto', 'travel_to_russia'];
+export class Portfolio extends Component {
 
-export const Portfolio = () => {
-  return (
-    <div className="Portfolio">
-      <ul className="Portfolio__list">
-        <li className="Portfolio__list-item">All</li>
-        <li className="Portfolio__list-item">CSS</li>
-        <li className="Portfolio__list-item">JS</li>
-        <li className="Portfolio__list-item">React</li>
-        <li className="Portfolio__list-item">Latest</li>
-      </ul>
-      {projectsName.map(project => <Card name={ project } key= { project } />)}
-    </div>
-  );
+  state = {
+    projectsType: 'Latest'
+  };
+
+  handleClick = event => {
+    this.setState({projectsType: event.target.innerHTML});
+  }
+
+  render() {
+
+    return (
+      <div style={{ color: this.props.theme === '#fef6eb' ? '#1c1d25' : '#fef6eb' }} className="Portfolio">
+        <nav className="Portfolio__nav">
+          <NavLink 
+            onClick={ this.handleClick } 
+            className="Nav__link" to={ "/portfolio/latest" } 
+            activeClassName="Nav__link Nav__link_active">Latest
+          </NavLink>
+          <NavLink 
+            onClick={ this.handleClick } 
+            className="Nav__link" to={ "/portfolio/css" } 
+            activeClassName="Nav__link Nav__link_active">CSS
+          </NavLink>
+          <NavLink 
+            onClick={ this.handleClick } 
+            className="Nav__link" to={ "/portfolio/js" } 
+            activeClassName="Nav__link Nav__link_active">JS
+          </NavLink>
+          <NavLink 
+            onClick={ this.handleClick } 
+            className="Nav__link" to={ "/portfolio/react" } 
+            activeClassName="Nav__link Nav__link_active">React
+          </NavLink>
+          <NavLink 
+            onClick={ this.handleClick } 
+            className="Nav__link" to={ "/portfolio/all" } 
+            activeClassName="Nav__link Nav__link_active">All
+          </NavLink>
+        </nav>
+        {Object.entries(projectsDescription).filter( ([key, value]) => value.type.includes(this.state.projectsType)).map( ([key, value]) => <Card name={ key } key= { key } />)}
+      </div>
+    );
+  }
 }

@@ -5,24 +5,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Inter", Tahoma, Verdana, sans-serif;
+  font-family: "Comic Sans MS", "Inter", Tahoma, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   letter-spacing: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
-  transition: transform 0.5s ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+  .Button {
+    width: 120px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .Button {
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
 .Button__arrow {
   position: absolute;
-  right: -20px;
-  top: 6.5px;
-  width: 35px;
-  height: 35px;
+  right: -30%;
+  top: 10%;
+  width: 40%;
+  height: 80%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .Button:hover .Button__arrow {

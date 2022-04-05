@@ -8,14 +8,14 @@
 }
 
 .AboutMe::before {
-  content: 'About';
+  content: "About";
   position: absolute;
   top: 0;
   right: 20px;
-  font-family: 'Halis Grotesque';
+  font-family: "Halis Grotesque";
   font-size: 6vw;
   color: steelblue;
-  opacity: .2;
+  opacity: 0.2;
 }
 
 @media screen and (max-width: 1024px) {
@@ -59,15 +59,34 @@
   padding-top: 5%;
 }
 
-.AboutMe__icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+.AboutMe__icon-card {
+  position: relative;
+  margin-bottom: 40px;
   margin-right: 20px;
 }
 
-.AboutMe__icon:hover {
-  .AboutMe__icon-path{
+.AboutMe__icon {
+  width: 80px;
+  height: 80px;
+}
+
+.AboutMe__icon-tooltip {
+  color: steelblue;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  transform: translateY(-150%);
+  justify-content: center;
+}
+
+.AboutMe__icon-card:hover {
+  .AboutMe__icon-path {
     fill: steelblue;
+  }
+  .AboutMe__icon-tooltip {
+    display: flex;
   }
 }

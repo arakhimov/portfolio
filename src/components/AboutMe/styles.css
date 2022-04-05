@@ -22,6 +22,7 @@
   .AboutMe {
     width: 100%;
   }
+
   .AboutMe::before {
     font-size: 10vw;
   }
@@ -58,15 +59,34 @@
   padding-top: 5%;
 }
 
-.AboutMe__icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+.AboutMe__icon-card {
+  position: relative;
+  margin-bottom: 40px;
   margin-right: 20px;
 }
 
-.AboutMe__icon:hover .AboutMe__icon-path {
+.AboutMe__icon {
+  width: 80px;
+  height: 80px;
+}
+
+.AboutMe__icon-tooltip {
+  color: steelblue;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  transform: translateY(-150%);
+  justify-content: center;
+}
+
+.AboutMe__icon-card:hover .AboutMe__icon-path {
   fill: steelblue;
+}
+.AboutMe__icon-card:hover .AboutMe__icon-tooltip {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */

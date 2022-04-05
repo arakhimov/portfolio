@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6c0cdf4f658c78c259fa74387c22bd3e",
+    "revision": "f38c6453344fe66e759b1435abc1eb91",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "31b1603da917857e30d2",
-    "url": "/portfolio/static/css/main.7646e273.chunk.css"
+    "revision": "ac3229e7d40dcdb4161c",
+    "url": "/portfolio/static/css/main.b7146670.chunk.css"
   },
   {
-    "revision": "a7267c4ff77151eb5731",
-    "url": "/portfolio/static/js/2.6cbc4aa9.chunk.js"
+    "revision": "dc5b793cac06db2e4d99",
+    "url": "/portfolio/static/js/2.b95dbd4b.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/portfolio/static/js/2.6cbc4aa9.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.b95dbd4b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "31b1603da917857e30d2",
-    "url": "/portfolio/static/js/main.12592da0.chunk.js"
+    "revision": "ac3229e7d40dcdb4161c",
+    "url": "/portfolio/static/js/main.5d003d8a.chunk.js"
   },
   {
     "revision": "88fbd3d397ae3690d5f2",
@@ -52,6 +52,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/cover_dark.f7d9c6cb.jpg"
   },
   {
+    "revision": "1c94fdec74e6bde7ccfe0dbf8dafd6ff",
+    "url": "/portfolio/static/media/create_sounds.1c94fdec.png"
+  },
+  {
+    "revision": "d80a6650dc48cfe53a8e44a61a48f64d",
+    "url": "/portfolio/static/media/device.d80a6650.png"
+  },
+  {
     "revision": "eadb0b540259e1fc3440b5188f3a49df",
     "url": "/portfolio/static/media/form_validation.eadb0b54.png"
   },
@@ -60,16 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/learn_to_learn.0d55c971.png"
   },
   {
-    "revision": "0bd4fe0a9df360c7273e4fc79fad2fad",
-    "url": "/portfolio/static/media/mesto.0bd4fe0a.png"
-  },
-  {
-    "revision": "398db2baa131a2a832ab98a42fce0a1d",
-    "url": "/portfolio/static/media/news_analyzer.398db2ba.png"
-  },
-  {
-    "revision": "4a8f2e6e52fbed395b1c3bf2f556cc23",
-    "url": "/portfolio/static/media/onpoint_test_task.4a8f2e6e.png"
+    "revision": "9f6ab64e110a7765d37773f285e9f58c",
+    "url": "/portfolio/static/media/pognali.9f6ab64e.png"
   },
   {
     "revision": "90a51a8cdd3ce4da1e8505c9915350d5",

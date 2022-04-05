@@ -1,52 +1,87 @@
-import React, { Component } from 'react';
-import './styles.css';
-import { NavLink } from 'react-router-dom';
-import { Card } from '../Card/index';
-import { projectsDescription } from '../../constants/projectsDescription';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { colorTheme } from "../../constants/colorTheme";
+import { projectsDescription } from "../../constants/projectsDescription";
+import { Card } from "../Card/index";
+import "./styles.css";
 
-export class Projects extends Component {
+const Projects = ({ theme }) => {
+  const [projectType, setType] = useState("Latest");
 
-  state = {
-    projectsType: 'Latest'
+  const handleClick = event => {
+    setType(event.target.innerHTML);
   };
 
-  handleClick = event => {
-    this.setState({projectsType: event.target.innerHTML});
-  }
+  const currentTheme =
+    theme === colorTheme.light ? colorTheme.dark : colorTheme.light;
 
-  render() {
+  return (
+    <div style={{ color: currentTheme }} className="Portfolio">
+      <nav className="Portfolio__nav">
+        <NavLink
+          onClick={handleClick}
+          className="Nav__link"
+          to={"/portfolio/projects/latest"}
+          activeClassName="Nav__link Nav__link_active"
+        >
+          Latest
+        </NavLink>
+        <NavLink
+          onClick={handleClick}
+          className="Nav__link"
+          to={"/portfolio/projects/css"}
+          activeClassName="Nav__link Nav__link_active"
+        >
+          CSS
+        </NavLink>
+        <NavLink
+          onClick={handleClick}
+          className="Nav__link"
+          to={"/portfolio/projects/js"}
+          activeClassName="Nav__link Nav__link_active"
+        >
+          JS
+        </NavLink>
+        <NavLink
+          onClick={handleClick}
+          className="Nav__link"
+          to={"/portfolio/projects/react"}
+          activeClassName="Nav__link Nav__link_active"
+        >
+          React
+        </NavLink>
+        <NavLink
+          onClick={handleClick}
+          className="Nav__link"
+          to={"/portfolio/projects/redux"}
+          activeClassName="Nav__link Nav__link_active"
+        >
+          Redux
+        </NavLink>
+        <NavLink
+          onClick={handleClick}
+          className="Nav__link"
+          to={"/portfolio/projects/nodejs"}
+          activeClassName="Nav__link Nav__link_active"
+        >
+          NodeJs
+        </NavLink>
+        <NavLink
+          onClick={handleClick}
+          className="Nav__link"
+          to={"/portfolio/projects/all"}
+          activeClassName="Nav__link Nav__link_active"
+        >
+          All
+        </NavLink>
+      </nav>
+      {Object.entries(projectsDescription)
+        .filter(([_, value]) => value.type.includes(projectType))
+        .map(([key]) => (
+          <Card name={key} key={key} />
+        ))}
+    </div>
+  );
+};
 
-    return (
-      <div style={{ color: this.props.theme === '#fef6eb' ? '#1c1d25' : '#fef6eb' }} className="Portfolio">
-        <nav className="Portfolio__nav">
-          <NavLink 
-            onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/projects/latest" } 
-            activeClassName="Nav__link Nav__link_active">Latest
-          </NavLink>
-          <NavLink 
-            onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/projects/css" } 
-            activeClassName="Nav__link Nav__link_active">CSS
-          </NavLink>
-          <NavLink 
-            onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/projects/js" } 
-            activeClassName="Nav__link Nav__link_active">JS
-          </NavLink>
-          <NavLink 
-            onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/projects/react" } 
-            activeClassName="Nav__link Nav__link_active">React
-          </NavLink>
-          <NavLink 
-            onClick={ this.handleClick } 
-            className="Nav__link" to={ "/portfolio/projects/all" } 
-            activeClassName="Nav__link Nav__link_active">All
-          </NavLink>
-        </nav>
-        {Object.entries(projectsDescription).filter( ([key, value]) => value.type.includes(this.state.projectsType)).map( ([key, value]) => <Card name={ key } key= { key } />)}
-      </div>
-    );
-  }
-}
+export default Projects;

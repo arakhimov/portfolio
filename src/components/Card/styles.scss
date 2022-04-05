@@ -4,7 +4,7 @@
   margin: 3% auto;
   border-radius: 1%;
   overflow: hidden;
-  background: #091A32;
+  background: #091a32;
   position: relative;
 }
 
@@ -20,7 +20,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: .9;
+  opacity: 0.9;
   display: block;
 }
 
@@ -37,7 +37,7 @@
   font-size: 3vw;
   letter-spacing: 1rem;
   font-weight: bold;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
   text-decoration: none;
   text-align: center;
 }
@@ -50,7 +50,7 @@
 
 .Card__hover-block {
   box-sizing: border-box;
-  background: rgba(9, 26, 50, .8);
+  background: rgba(9, 26, 50, 0.9);
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -58,11 +58,11 @@
   padding: 5%;
   display: flex;
   justify-content: space-between;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -116,8 +116,8 @@
   .Card__right-column {
     width: 100%;
     flex-grow: 2;
-    font-size: .55rem;
-    line-height: .9rem;
+    font-size: 0.55rem;
+    line-height: 0.9rem;
   }
 }
 

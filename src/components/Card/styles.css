@@ -4,7 +4,7 @@
   margin: 3% auto;
   border-radius: 1%;
   overflow: hidden;
-  background: #091A32;
+  background: #091a32;
   position: relative;
 }
 
@@ -48,7 +48,7 @@
 }
 .Card__hover-block {
   box-sizing: border-box;
-  background: rgba(9, 26, 50, 0.8);
+  background: rgba(9, 26, 50, 0.9);
   position: absolute;
   z-index: 1;
   width: 100%;
